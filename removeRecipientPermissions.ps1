@@ -47,7 +47,7 @@ else
 	 Filename:     	
 	===========================================================================
 	.DESCRIPTION
-		A description of the file.
+		Removed trustee from all mailboxes where it has permissions
 #>
 
 
