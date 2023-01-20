@@ -4,7 +4,14 @@
     [Parameter(Mandatory=$true,HelpMessage='email address of the delgate to whom you are removing access for')]
     [string]$delegate
 )
-
+function write_logFile
+{
+	Param ([string]$log_file,
+		$log_message)
+	$time_stamp = (Get-Date).toString("yyyy-MM-dd HH:mm:ss")
+	$log_message = "[$($time_stamp)]: " + $log_message
+	Add-content $log_file -value $log_message
+}
 Write-Output 'Loading O365 Powershell support'
 
 & C:\bin\justlogon.ps1
